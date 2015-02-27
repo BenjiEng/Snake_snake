@@ -1,6 +1,6 @@
 # Snakey_Snake
 JS snake game
-[Live Link]
+[Live Link](http://benjieng.github.io/Snake_snake/snake.html)
 
 A Javascript game of the old Nokia classic, Snake
 - Implements interval time for snake movement 
