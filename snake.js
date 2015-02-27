@@ -7,7 +7,7 @@
   var Snake = SG.Snake = function(dim) {
     this.dim = dim;
     this.dir = "N";
-    this.segments = [[dim / 2, dim / 2], [dim / 2 , dim / 2 - 1], [dim / 2, dim / 2 -2]];
+    this.segments = [[dim / 2, dim / 2], [dim / 2 + 1, dim / 2], [dim / 2 + 2, dim / 2]];
     this.apple = [];
   };
 
@@ -25,7 +25,7 @@
     var newCol = first[1] + dirVal[1];
     var grow = false;
     var outbounds = false;
-    if (this.outBounds(newRow, newCol)) {
+    if (this.endGame(newRow, newCol)) {
       outbounds = true;
     } else {
       this.segments.unshift([newRow, newCol]);
@@ -39,18 +39,18 @@
     return [outbounds, grow];
   };
 
-  Snake.prototype.outBounds = function(newRow, newCol) {
+  Snake.prototype.endGame = function(newRow, newCol) {
     var returnVal = false;
     if(newRow >= this.dim || newRow < 0) {
-      alert("You lose");
+      // alert("You lose");
       returnVal = true;
     } else if(newCol >= this.dim || newCol < 0){
-      alert("You lose");
+      // alert("You lose");
       returnVal = true;
     } else {
       this.segments.forEach (function(segment){
         if (segment[0] === newRow && segment[1] === newCol) {
-          alert("You ate yourself");
+          // alert("You ate yourself");
           returnVal = true;
         }
       });
@@ -111,7 +111,7 @@
     return display;
   };
 
-//Apple class
+  //Apple class
 
   // var Apple = SG.Apple = function(dim, snake){
   //   this.dim = dim;
