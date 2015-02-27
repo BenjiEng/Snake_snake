@@ -8,6 +8,7 @@ A Javascript game of the old Nokia classic, Snake
 - Uses a javascript view class to send information to be rendered on the DOM
 
 Controls:
+- Press spacebar to start/pause the game
 - Use Up, Down, Left, Right arrows to control the snake's movement
 - Don't hit the walls or run into yourself
 - Run into the apples to grow your snake
