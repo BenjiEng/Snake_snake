@@ -19,7 +19,7 @@
     var $gameOver = $('<h3 class="gameover">Push Spacebar to Start</h3>');
     $('body').append($gameOver);
 
-    var $gameScore = $('<h1 class="score">Score: ' + this.score + '</h1>');
+    var $gameScore = $('<h2 class="score">Score: ' + this.score + '</h2>');
     $('body').append($gameScore);
 
     // create board
@@ -39,7 +39,6 @@
         clearInterval(this.interval)
 
         $('body').find('.gameover').html("Push Spacebar to Start");
-
       }
 
     } else {
@@ -55,7 +54,7 @@
       this.board = new SG.Board(this.dim, this.snake);
       clearInterval(this.interval)
       this.start = false;
-      var $gameScore = $('<h1 class="score">Score: 0</h1>');
+      var $gameScore = $('<h2 class="score">Score: 0</h2>');
       $('body').find('.score').html($gameScore);
     };
 
@@ -63,7 +62,7 @@
       this.board = new SG.Board(this.dim, this.snake);
       this.score += 1;
 
-      var $gameScore = $('<h1 class="score">Score: ' + this.score + '</h1>');
+      var $gameScore = $('<h2 class="score">Score: ' + this.score + '</h2>');
       $('body').find('.score').html($gameScore);
     };
 

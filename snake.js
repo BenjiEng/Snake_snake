@@ -111,14 +111,6 @@
     return display;
   };
 
-  //Apple class
-
-  // var Apple = SG.Apple = function(dim, snake){
-  //   this.dim = dim;
-  //   this.snake = snake;
-  //   this.coord = this.generate();
-  // };
-
   Board.prototype.placeApple = function() {
     var loop = true;
     while(loop) {
@@ -132,9 +124,7 @@
         }
       });
     }
-
     return [row, col];
-
   };
 
 
